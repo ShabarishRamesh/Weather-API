@@ -28,8 +28,6 @@ const Api = () => {
                 You can get your Local Weather report here...
             </p>
 
-            <label className="text-xl">City : </label>
-
             <input
                 className="rounded-lg p-1 text-black"
                 type="text"
