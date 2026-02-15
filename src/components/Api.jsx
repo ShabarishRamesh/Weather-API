@@ -16,7 +16,7 @@ const Api = () => {
 
             setWeather(res.data);
         } catch (err) {
-            console.log(err);
+            alert("Error fetching weather data. Please check the city name and try again.");
         }
     };
 
@@ -43,13 +43,13 @@ const Api = () => {
             </button>
 
             {/* Display Weather */}
-            {weather && (
+            {weather ?(
                 <div className="mt-5 grid grid-rows-3 gap-2">
                     <p>Weather : {weather.weather[0].main}</p>
                     <p>Temperature : {weather.main.temp} °C</p>
                     <p>Description : {weather.weather[0].description}</p>
                 </div>
-            )}
+            ):<div className="mt-5 text-red-400">No weather data available since no city was entered.</div>}
         </div>
     );
 };
