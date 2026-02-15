@@ -34,9 +34,9 @@ const Api = () => {
                 placeholder="Enter your city..."
                 onChange={(e) => WeatherList.setcity(e.target.value)}
             />
-
+            <br />
             <button
-                className="bg-slate-800 rounded-lg p-1 ml-1"
+                className="bg-slate-800 rounded-lg p-1 mt-2 hover:bg-slate-600 transition duration-300  text-white"
                 onClick={handleReport}
             >
                 Get Report
